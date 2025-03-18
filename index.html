@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href=#home>Home</a></li>
+                    <li><a href=#about>About</a></li>
+                    <li><a href=#resume>Resume</a></li>
+                    <li><a href=#portfolio>Portfolio</a></li>
+                    <li><a href=#contact>Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                    <h1>Welcome to my Portfolio</h1>
+            </div>
+        </div>
+    </div>
+    <!-----about------>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col1">
+                    <h1 class="sub-title">About me</h1>
+                    <p>
+                        Hello, my name is Carl Trinidad, and I am a third-year student at George Brown College, where I am actively expanding my knowledge and skills in my field. Throughout my academic journey, I have developed a strong passion for continuous learning and personal growth.
+                        <br>
+                        <br>As I advance in my studies, I strive to embrace challenges as opportunities for innovation and problem-solving. I have had the privilege of learning several programming languages, including JavaScript, Python, HTML/CSS, and Java, which have helped me build a solid foundation in software development and web technologies. Each language has enhanced my problem-solving skills and provided me with valuable insights into how to approach complex tasks in an efficient and organized manner.
+                        <br>Whether it’s through hands-on projects, group collaborations, or independent research, I am committed to refining my expertise and staying up-to-date with the latest trends in my industry.
+                        <br>
+                        <br>My goal is to contribute meaningfully to the field by bringing fresh ideas, integrity, and a deep commitment to excellence. I am driven by a desire to not only succeed personally but also to make a positive impact on those I work with, the communities I serve, and the industry as a whole.
+                        <br>Success, to me, is not solely about personal achievements. It’s about creating lasting, positive connections, contributing to team efforts, and making a difference where it matters most. I look forward to the opportunities ahead to learn, grow, and contribute in meaningful ways.
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('experience')">Work Experience</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="education">
+                        <ul>
+                            <li><span>George Brown College</span> : 2022 - Present</li>
+                            <li><span>Dante Aleghieri Academy</span> : 2018 - 2022</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Savour Market</span> : 2024 - Present <br> - Store Clerk</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-----resume------>
+    <div id="resume">
+        <div class="container">
+            <h1 class="sub-title">My Resume</h1>
+            <a href="assets/Resume.pdf" download="Carl_Trinidad_Resume.pdf" class="resume-btn">Download Resume</a>
+    
+            <div class="resume-viewer">
+                <iframe src="assets/Resume.pdf" width="100%" height="600px"></iframe>
+            </div>
+        </div>
+    </div>
+    
+    <!-----portfolio------>
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">Portfolio</h1>
+            <div class="portfolio-list">
+                <div>
+                    <h2>Tic Tac Toe</h2>
+                    <a href="#">Link to Github</a>
+                </div>
+                <div>
+                    <h2>Booking app group project</h2>
+                    <a href="https://github.com/jamdazai/GBC_EventBooking_Group24_Assignment2">Link to GitHub</a>
+                </div>
+                <div>
+                    <h2>Employee/user login</h2>
+                    <a href="https://github.com/Dem1ze/Comp3123-Assignment">Link to GitHub</a>
+                </div>
+                <div>
+                    <h2>Chat App</h2>
+                    <a href="https://github.com/Dem1ze/101425882_lab_test1_chat_app">Link to Github</a>
+                </div>
+                <div>
+                    <h2>Daycare Buddy</h2>
+                    <a href="https://github.com/jamdazai/Daycare-Buddy">Link to GitHub</a>
+                    <br>
+                    <a href="assets">Project details</a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <!-----contact------>
+<div id="contact">
+    <div class="container">
+        <h1 class="sub-title">Contact Information</h1>
+        <div class="contact-details">
+            <div class="contact-item">
+                <h3>Email</h3>
+                <p><a href="mailto:101425882@georgebrown.ca">101425882@georgebrown.ca</a></p>
+            </div>
+            <div class="contact-item">
+                <h3>Phone</h3>
+                <p><a href="tel:+1234567890">+1 (234) 567-890</a></p>
+            </div>
+            <div class="contact-item">
+                <h3>GitHub</h3>
+                <p><a href="https://github.com/Dem1ze" target="_blank">GitHub Profile</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <script>
+        function opentab(tabname) {
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+    
+            for (let tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (let tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+    
+            document.getElementById(tabname).classList.add("active-tab"); 
+            event.currentTarget.classList.add("active-link"); 
+        }
+    </script>     
+</body>
+</html>
